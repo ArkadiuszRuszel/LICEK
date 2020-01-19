@@ -1,0 +1,18 @@
+<template>
+   <q-page class="q-pa-md">
+           <q-avatar size="60px" class="q-mb-sm avatar">
+        <img src="statics/krolik.jpg">
+ <p class="text-h5 text-bold"></p>Twoje konto
+     </q-avatar>Twoje konto
+</q-page>
+</template>
+
+
+<script>
+    export default {
+        
+    }
+</script>
+
+
+

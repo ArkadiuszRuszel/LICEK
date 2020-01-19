@@ -1,0 +1,16 @@
+<template>
+  <q-page class="q-pa-lg">
+<h5 class="q-mt-none">Facebook</h5>
+<p>Nie zapomnij polubić Nas na facebooku :)</p>
+
+<h5 class="q-mt-none">Znany Lekarz</h5>
+<p>Oraz pozytywną opinię na znanym lekarzu!</p>
+
+  </q-page>
+</template>
+
+<script>
+export default {
+
+}
+</script>

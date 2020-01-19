@@ -1,0 +1,55 @@
+<template>
+  <q-page class="q-pa-lg bg-grey-1">
+<p class="text-h5 text-bold">Umów się na wizytę już dziś!</p>
+ <div class="q-pa-md">
+   <p class="text-subtitle2 text-center">Wybierz pasującą Ci datę</p>
+    <div class="q-gutter-md">
+      <q-date
+        color="green"
+        v-model="date"
+        :events="eventsFn"
+        class="calendar"
+        event-color="teal"
+      />
+    </div>
+  </div>
+<p class="text-subtitle2 text-center">Wybierz pasującą Ci godzinę</p>
+
+
+
+      <template v-slot:append>
+        <q-icon name="access_time" class="cursor-pointer">
+          <q-popup-proxy transition-show="scale" transition-hide="scale">
+            <q-time v-model="time" mask="dddd, MMM YYYY HH:mm" format12h />
+          </q-popup-proxy>
+        </q-icon>
+      </template>
+
+<br>
+<div class="text-center">
+  <a href="/#/ConfirmVisit"><q-btn type="submit" rounded no-caps color="green" class="confirm">Potwierdź</q-btn></a>
+</div>
+</q-page>
+</template>
+
+<style scoped>
+  .calendar {
+    width:100%;
+}
+  .confirm {
+    width:300px;
+}
+</style>
+
+
+
+<script>
+export default {
+  data () {
+    return {
+      date: '',
+      events:'',
+    }
+  }
+}
+</script>

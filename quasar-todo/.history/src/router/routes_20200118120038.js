@@ -1,0 +1,32 @@
+
+const routes = [
+  {
+    path: '/',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Home.vue') },
+      { path: '/home', component: () => import('pages/Home.vue') },
+      { path: '/interview', component: () => import('pages/Interview.vue') },
+      { path: '/help', component: () => import('pages/Help.vue') },
+      { path: '/account', component: () => import('pages/Account.vue') },
+      { path: '/socialmedia', component: () => import('pages/SocialMedia.vue') },
+      { path: '/downloads', component: () => import('pages/Downloads.vue') },
+      { path: '/changelog', component: () => import('pages/ChangeLog.vue') },
+      { path: '/products', component: () => import('pages/Products.vue') },
+      { path: '/visit', component: () => import('pages/Visit.vue') },
+      { path: '/newaccount', component: () => import('pages/NewAccount.vue') },
+      { path: '/forgotpassword', component: () => import('pages/ForgotPassword.vue') },
+      { path: '/confirmvisit', component: () => import('pages/ForgotPassword.vue') },
+    ]
+  }
+]
+
+// Always leave this as last one
+if (process.env.MODE !== 'ssr') {
+  routes.push({
+    path: '*',
+    component: () => import('pages/Error404.vue')
+  })
+}
+
+export default routes
